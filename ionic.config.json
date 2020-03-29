@@ -1,5 +1,8 @@
 {
   "name": "Fetus Factory",
-  "integrations": {},
-  "type": "react"
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "22c67537"
 }
