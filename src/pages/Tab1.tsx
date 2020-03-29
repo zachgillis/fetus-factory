@@ -16,7 +16,7 @@ const Tab1: React.FC = () => {
       <IonContent>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Create your baby</IonTitle>
+            <IonTitle size="large">Create</IonTitle>
           </IonToolbar>
         </IonHeader>
         

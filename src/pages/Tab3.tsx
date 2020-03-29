@@ -33,6 +33,9 @@ const Tab3: React.FC = () => {
           <IonCardContent>
             We are high school students with an interest in machine learning and app development. Please contact us with any quesitons.
             <IonList>
+              <IonListHeader>
+                Contacts
+              </IonListHeader>
             <IonItem>
               <IonIcon icon={personCircleOutline} slot="start"></IonIcon>
               <IonLabel>Zach Gillis</IonLabel>
@@ -57,7 +60,6 @@ const Tab3: React.FC = () => {
                 Contact
               </IonButton>
             </IonItem>
-
             </IonList>
 
           </IonCardContent>
