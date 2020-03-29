@@ -44,7 +44,7 @@ const Tab3: React.FC = () => {
             <IonItem>
               <IonIcon icon={personCircleOutline} slot="start"></IonIcon>
               <IonLabel>Edwin Ing</IonLabel>
-              <IonButton slot="end" href="mailto:FILL@gmail.com">
+              <IonButton slot="end" href="mailto:FILLL@gmail.com">
                 <IonIcon icon={mail} slot="start" />
                 Contact
               </IonButton>
