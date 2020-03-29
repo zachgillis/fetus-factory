@@ -1,7 +1,8 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonList, IonListHeader, IonItem, IonIcon, IonLabel, IonButton } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab3.css';
+import { personCircleOutline, home, star, mail } from 'ionicons/icons';
 
 const Tab3: React.FC = () => {
   return (
@@ -27,20 +28,46 @@ const Tab3: React.FC = () => {
         </IonCard>
         <IonCard>
           <IonCardHeader>
-            <IonCardTitle>Privacy</IonCardTitle>
+            <IonCardTitle>Who We Are</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
-            The photo is rendered directly on your device. All your content remains local.
+            We are high school students with an interest in machine learning and app development. Please contact us with any quesitons.
+            <IonList>
+            <IonItem>
+              <IonIcon icon={personCircleOutline} slot="start"></IonIcon>
+              <IonLabel>Zach Gillis</IonLabel>
+              <IonButton slot="end" href="mailto:zachgillis@me.com">
+                <IonIcon icon={mail} slot="start" />
+                Contact
+              </IonButton>
+            </IonItem>
+            <IonItem>
+              <IonIcon icon={personCircleOutline} slot="start"></IonIcon>
+              <IonLabel>Edwin Ing</IonLabel>
+              <IonButton slot="end" href="mailto:FILL@gmail.com">
+                <IonIcon icon={mail} slot="start" />
+                Contact
+              </IonButton>
+            </IonItem>
+            <IonItem>
+              <IonIcon icon={personCircleOutline} slot="start"></IonIcon>
+              <IonLabel>Hoon Shin</IonLabel>
+              <IonButton slot="end" href="mailto:FILL@gmail.com">
+                <IonIcon icon={mail} slot="start" />
+                Contact
+              </IonButton>
+            </IonItem>
+
+            </IonList>
+
           </IonCardContent>
         </IonCard>
         <IonCard>
           <IonCardHeader>
-            <IonCardTitle>Contact</IonCardTitle>
-            <IonCardSubtitle></IonCardSubtitle>
+            <IonCardTitle>Privacy</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
-            Created by Zach Gillis (zachgillis@icloud.com), Edwin Ing (sexiboi@gmail.com), and Hoon Shin (bobmanual@gmail.com).
-            Please contact us if you have any questions.
+            The photo is rendered directly on your device. All your content remains local.
           </IonCardContent>
         </IonCard>
         <IonCard>

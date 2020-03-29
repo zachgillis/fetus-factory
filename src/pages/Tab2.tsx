@@ -17,7 +17,6 @@ const Tab2: React.FC = () => {
             <IonTitle size="large">History</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Your History" />
       </IonContent>
     </IonPage>
   );
