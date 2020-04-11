@@ -2,7 +2,7 @@ import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonList, IonListHeader, IonItem, IonIcon, IonLabel, IonButton } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab3.css';
-import { personCircleOutline, home, star, mail } from 'ionicons/icons';
+import { personCircleOutline, home, star, mail, mailOutline } from 'ionicons/icons';
 
 const Tab3: React.FC = () => {
   return (

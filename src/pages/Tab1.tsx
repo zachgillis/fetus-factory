@@ -1,27 +1,47 @@
-import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import React, { Component, useState } from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonIcon, IonImg, IonCardSubtitle, IonFabButton, IonFab, IonButtons, IonModal } from '@ionic/react';
 import './Tab1.css';
-import { usePhotoGallery } from '../hooks/usePhotoGallery';
+import { image, imageOutline, checkmark } from 'ionicons/icons';
+import { Plugins, CameraResultType } from '@capacitor/core';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
-const Tab1: React.FC = () => {
-  const { photos, takePhoto } = usePhotoGallery();
+import CreateTab from './CreateTab';
+
+const { Camera } = Plugins;
+
+const INITIAL_STATE = {
+  photo1: '',
+  photo2: '',
+  
+};
+
+export const Tab1: React.FC = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <IonPage>
-      <IonHeader>
+    <IonContent>
+      <CreateTab></CreateTab>
+      <IonFab vertical="bottom" horizontal="end" slot="fixed">
+        <IonFabButton onClick={() => setShowModal(true)}>
+          <IonIcon icon={checkmark} />
+        </IonFabButton>
+      </IonFab>
+
+      <IonModal isOpen={showModal}>
+        <IonHeader>
         <IonToolbar>
-          <IonTitle>Create</IonTitle>
+          <IonTitle>Your Child</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Create</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        
+      <IonContent className="ion-padding">
+        <p>The Results</p>
+        <IonButton onClick={() => setShowModal(false)}>
+          Close
+        </IonButton>
       </IonContent>
-    </IonPage>
+      </IonModal>
+
+    </IonContent>
   );
 };
 
