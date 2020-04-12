@@ -63,19 +63,7 @@ class CreateTab extends Component {
     
 
     return (
-      <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Create</IonTitle>
-          </IonToolbar>
-        </IonHeader>
         <IonContent>
-          <IonHeader collapse="condense">
-            <IonToolbar>
-              <IonTitle size="large">Create</IonTitle>
-            </IonToolbar>
-          </IonHeader>
-          
           <IonCard style={{ 'minHeight': '30%' }}>
             <IonCardHeader>
               <IonCardTitle>
@@ -109,11 +97,7 @@ class CreateTab extends Component {
               <IonImg style={{ 'maxWidth': '500px' }} src={photo2} ></IonImg>
             </IonCardContent>
           </IonCard>
-
-          
-
         </IonContent>
-      </IonPage>
     );
   };
 }

@@ -19,29 +19,53 @@ export const Tab1: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <IonContent>
-      <CreateTab></CreateTab>
-      <IonFab vertical="bottom" horizontal="end" slot="fixed">
-        <IonFabButton onClick={() => setShowModal(true)}>
-          <IonIcon icon={checkmark} />
-        </IonFabButton>
-      </IonFab>
 
-      <IonModal isOpen={showModal}>
-        <IonHeader>
+  <IonPage>
+    <IonHeader>
+      <IonToolbar>
+        <IonTitle>Create</IonTitle>
+      </IonToolbar>
+    </IonHeader>
+    <IonContent>
+      <IonHeader collapse="condense">
         <IonToolbar>
-          <IonTitle>Your Child</IonTitle>
+          <IonTitle size="large">Create</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding">
-        <p>The Results</p>
-        <IonButton onClick={() => setShowModal(false)}>
-          Close
+
+    
+      <CreateTab></CreateTab>
+
+
+
+      <IonFab vertical="bottom" horizontal="start">
+        <IonButton expand="block" onClick={() => setShowModal(true)}>
+          <IonIcon icon={checkmark} slot="start"/>
+            Create Child
         </IonButton>
-      </IonContent>
+      </IonFab>
+
+      <IonModal 
+        isOpen={showModal} 
+        swipeToClose={true}
+        onDidDismiss={() => setShowModal(false)}>
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle>Your Child</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <IonContent className="ion-padding">
+          <p>The Results</p>
+          <IonButton onClick={() => setShowModal(false)}>
+            Close
+          </IonButton>
+        </IonContent>
       </IonModal>
 
+    
     </IonContent>
+
+    </IonPage>
   );
 };
 
