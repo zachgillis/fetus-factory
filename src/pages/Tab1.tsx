@@ -1,19 +1,15 @@
 import React, { Component, useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonIcon, IonImg, IonCardSubtitle, IonFabButton, IonFab, IonButtons, IonModal } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonIcon, IonImg, IonCardSubtitle, IonFabButton, IonFab, IonButtons, IonModal, IonFabList } from '@ionic/react';
 import './Tab1.css';
-import { image, imageOutline, checkmark } from 'ionicons/icons';
+import { image, imageOutline, checkmark, share, logoVimeo, logoFacebook, logoInstagram, logoTwitter } from 'ionicons/icons';
 import { Plugins, CameraResultType } from '@capacitor/core';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
+import Iframe from 'react-iframe';
+
 import CreateTab from './CreateTab';
 
-const { Camera } = Plugins;
 
-const INITIAL_STATE = {
-  photo1: '',
-  photo2: '',
-  
-};
 
 export const Tab1: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -52,13 +48,44 @@ export const Tab1: React.FC = () => {
         <IonHeader>
           <IonToolbar>
             <IonTitle>Your Child</IonTitle>
+
+            <IonButtons slot="start">
+              <IonButton onClick={() => setShowModal(false)}>
+                Done
+              </IonButton>
+            </IonButtons>
+
           </IonToolbar>
+
+          
+
         </IonHeader>
         <IonContent className="ion-padding">
-          <p>The Results</p>
-          <IonButton onClick={() => setShowModal(false)}>
-            Close
-          </IonButton>
+          
+        <Iframe url="https://www.youtube.com/embed/KhRDcxebVFk"
+            position="absolute"
+            width="95%"
+            height="60%"
+            frameBorder={0}
+        />
+
+          
+        
+        <IonFab vertical="bottom" horizontal="center" slot="fixed">
+          <IonFabButton>
+            <IonIcon icon={share} />
+          </IonFabButton>
+          <IonFabList side="top">
+            <IonFabButton><IonIcon icon={logoFacebook} /></IonFabButton>
+          </IonFabList>
+          <IonFabList side="start">
+            <IonFabButton><IonIcon icon={logoInstagram} /></IonFabButton>
+          </IonFabList>
+          <IonFabList side="end">
+            <IonFabButton><IonIcon icon={logoTwitter} /></IonFabButton>
+          </IonFabList>
+        </IonFab>
+
         </IonContent>
       </IonModal>
 

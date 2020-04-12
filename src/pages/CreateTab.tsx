@@ -77,6 +77,7 @@ class CreateTab extends Component {
                   <IonIcon icon={image} slot="start" />
                   Upload
               </IonButton>
+              <br></br><br></br>
               <IonImg style={{ 'maxWidth': '500px' }} src={photo1} ></IonImg>
             </IonCardContent>
           </IonCard>
@@ -94,6 +95,7 @@ class CreateTab extends Component {
                   <IonIcon icon={image} slot="start" />
                   Upload
               </IonButton>
+              <br></br><br></br>
               <IonImg style={{ 'maxWidth': '500px' }} src={photo2} ></IonImg>
             </IonCardContent>
           </IonCard>
