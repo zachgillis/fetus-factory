@@ -5,11 +5,10 @@ import { image, imageOutline, checkmark, share, logoVimeo, logoFacebook, logoIns
 import { Plugins, CameraResultType } from '@capacitor/core';
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
 
-import Iframe from 'react-iframe';
 
 import CreateTab from './CreateTab';
 
-
+import FinalImg from './FinalImg';
 
 export const Tab1: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -62,14 +61,14 @@ export const Tab1: React.FC = () => {
         </IonHeader>
         <IonContent className="ion-padding">
           
-        <Iframe url="https://www.youtube.com/embed/KhRDcxebVFk"
-            position="absolute"
-            width="95%"
-            height="60%"
-            frameBorder={0}
-        />
 
-          
+        <FinalImg></FinalImg>
+
+        <script>
+
+
+
+        </script>
         
         <IonFab vertical="bottom" horizontal="center" slot="fixed">
           <IonFabButton>

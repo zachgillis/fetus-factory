@@ -6,5 +6,10 @@
     <param name="ios-package" value="CDVCamera"/>
   </feature>
 
+  <feature name="FirebaseAuthentication">
+    <param name="ios-package" value="FirebaseAuthenticationPlugin"/>
+    <param name="onload" value="false"/>
+  </feature>
+
   
 </widget>
