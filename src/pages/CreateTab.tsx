@@ -8,8 +8,8 @@ import { defineCustomElements } from '@ionic/pwa-elements/loader';
 const { Camera } = Plugins;
 
 const INITIAL_STATE = {
-  photo1: '',
-  photo2: '',
+  photo1: 'https://upload.wikimedia.org/wikipedia/commons/d/d2/Blank.png',
+  photo2: 'https://upload.wikimedia.org/wikipedia/commons/d/d2/Blank.png',
   
 };
 
@@ -64,6 +64,7 @@ class CreateTab extends Component {
 
     return (
         <IonContent>
+          <h1>I'll make it so that you can upload images rather than just taking them</h1>
           <IonCard style={{ 'minHeight': '30%' }}>
             <IonCardHeader>
               <IonCardTitle>
