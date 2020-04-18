@@ -3,27 +3,16 @@
   "name": "Fetus Factory",
   "icons": [
     {
-      "src": "assets/icon/icon-192.png",
+      "src": "assets/icon/icon-192-back.png",
       "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icon/iconback180.png",
       "type": "image/png",
-      "sizes": "180",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     },
     {
-      "src": "assets/icon/icon-512.png",
+      "src": "assets/icon/icon-512-back.png",
       "type": "image/png",
       "sizes": "512x512",
-      "purpose": "transparent"
-    },
-    {
-      "src": "assets/icon/icon-w-back.png",
-      "type": "image/png",
-      "sizes": "512x512 1024x1024",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
     
   ],
